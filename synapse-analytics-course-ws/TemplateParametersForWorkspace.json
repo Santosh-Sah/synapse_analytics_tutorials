@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synapse-analytics-course-ws"
+		},
+		"ls_serverless_sql_pool_db_nyc_taxi_ldw_connectionString": {
+			"value": ""
+		},
+		"synapse-analytics-course-ws-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"bing-covid-19-data_sasUri": {
+			"value": ""
+		},
+		"ls_synapsecoursedl_properties_typeProperties_url": {
+			"value": "https://synapseprimary001.dfs.core.windows.net/"
+		},
+		"synapse-analytics-course-ws-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://synapseprimary001.dfs.core.windows.net"
+		}
+	}
+}
