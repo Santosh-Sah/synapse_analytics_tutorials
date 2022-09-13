@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "IF (NOT EXISTS(SELECT * FROM sys.credentials WHERE name = 'synapse-analytics-course-cosmos-db'))\n    CREATE CREDENTIAL [synapse-analytics-course-cosmos-db]\n    WITH IDENTITY = 'SHARED ACCESS SIGNATURE', SECRET = '2f31RU0og4eBswGUtyjye8J2cmRq3lwfMPzdZ53uxeuuok1PnOc9sDNcourjGHJ3nAyRoVj4AqZxPvX98Tvgrg=='\nGO\n\nSELECT TOP 100 *\nFROM OPENROWSET(​PROVIDER = 'CosmosDB',\n                CONNECTION = 'Account=synapse-analytics-course-cosmos-db;Database=nyctaxidb',\n                OBJECT = 'Heartbeat',\n                SERVER_CREDENTIAL = 'synapse-analytics-course-cosmos-db'\n) AS [Heartbeat]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
